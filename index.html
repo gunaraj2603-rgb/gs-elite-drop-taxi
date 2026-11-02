@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Elite Drop Taxi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo">GS Elite Drop Taxi</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <img src="Images/logo.png" alt="GS Elite Drop Taxi Logo" class="logo">
+    <h1>GS Elite Drop Taxi</h1>
+    <p>Safe, Reliable & Affordable Taxi Service</p>
+    
+    <div class="header-buttons">
+        <a href="#booking-form" class="btn btn-book">Book Now</a>
+        <a href="#contact" class="btn btn-call">Call Now</a>
+    </div>
+</header>
+
+<section id="booking-form" class="booking-form">
+    <h2>Book Your Taxi</h2>
+
+
+    <form onsubmit="handleBookingSubmission(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        <input type="text" id="pickup" placeholder="Pickup Location" required>
+        <input type="text" id="drop" placeholder="Drop Location" required>
+
+        <!-- Trip Type dropdown before dates -->
+        <select id="trip" onchange="toggleReturnDate()" required>
+            <option value="One-Way Taxi">One-Way Taxi</option>
+            <option value="Round-Trip Taxi">Round-Trip Taxi</option>
+        </select>
+
+        <label for="date" style="display: block; text-align: left; margin-top: 10px; font-size: 14px; color: #333;">Pickup Date:</label>
+        <input type="date" id="date" required>
+
+        <!-- Hidden Return Date field that appears for Round-Trip -->
+        <div id="returnDateContainer" style="display: none; margin-top: 10px;">
+            <label for="returnDate" style="display: block; text-align: left; font-size: 14px; color: #333;">Return Date:</label>
+            <input type="date" id="returnDate">
+        </div>
+
+        <button type="submit" class="quote-btn" style="width: 100%; border: none; cursor: pointer; margin-top: 15px;">
+            BOOK NOW
+        </button>
+    </form>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <h3>One-Way Taxi</h3>
+        <p>Affordable intercity taxi rides with no return fare.</p>
+    </div>
+    <div class="service-box">
+        <h3>Round-Trip Taxi</h3>
+        <p>Comfortable round-trip travel for family and business needs.</p>
+    </div>
+</section>
+
+<section class="vehicles">
+    <h2>Our Fleet</h2>
+    <div class="vehicle-container">
+        <div class="vehicle-card">
+            <img src="Images/sedan.jpg" alt="Sedan">
+            <h3>Sedan</h3>
+            <p>Toyota Etios</p>
+            <p>4 Passengers</p>
+        </div>
+        <div class="vehicle-card">
+            <img src="Images/suv.jpg" alt="SUV">
+            <h3>SUV</h3>
+            <p>6-7 Passengers</p>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-card">
+        ⭐⭐⭐⭐⭐
+        <p>Excellent service and on-time pickup.</p>
+        <h4>Customer</h4>
+    </div>
+    <div class="review-card">
+        ⭐⭐⭐⭐⭐
+        <p>Very comfortable journey and friendly driver.</p>
+        <h4>Customer</h4>
+    </div>
+</section>
+
+<section class="routes">
+    <h2>Popular Routes</h2>
+    <div class="route-container">
+        <div class="route-card">Chennai → Pondicherry</div>
+        <div class="route-card">Chennai → Tirupati</div>
+        <div class="route-card">Chennai → Bangalore</div>
+        <div class="route-card">Chennai → Vellore</div>
+        <div class="route-card">Chengalpattu → Chennai Airport</div>
+        <div class="route-card">Chennai → Mahabalipuram</div>
+    </div>
+</section>
+
+<section class="fare-table">
+    <h2>Taxi Fare Details</h2>
+    <table>
+        <tr>
+            <th>Vehicle Type & Model</th>
+            <th>One Way Price</th>
+            <th>Round Trip Price</th>
+        </tr>
+        <tr>
+            <td>Sedan - Toyota Etios</td>
+            <td>₹14 / KM</td>
+            <td>₹13 / KM</td>
+        </tr>
+        <tr>
+            <td>SUV</td>
+            <td>₹19 / KM</td>
+            <td>₹18 / KM</td>
+        </tr>
+    </table>
+</section>
+
+<section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li>24×7 Support</li>
+        <li>Professional Drivers</li>
+        <li>On-Time Pickup</li>
+        <li>Clean Vehicles</li>
+        <li>Affordable Pricing</li>
+    </ul>
+</section>
+
+<section class="highlight">
+    <h2>Why Book With GS Elite Drop Taxi?</h2>
+    <div class="highlight-box">✅ No Hidden Charges</div>
+    <div class="highlight-box">✅ Experienced Drivers</div>
+    <div class="highlight-box">✅ 24×7 Customer Support</div>
+    <div class="highlight-box">✅ Clean & Sanitized Cars</div>
+    <div class="highlight-box">✅ On-Time Pickup Guarantee</div>
+</section>
+
+<section class="map-section">
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps?q=Chengalpattu,Tamil Nadu&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Call Us: 9677040298</p>
+    <p>💬 WhatsApp: <a href="https://wa.me/9677040298" target="_blank">Click Here to Chat</a></p>
+    <p>📍 Chennai & Chengalpattu</p>
+    <p>⏰ Available 24×7</p>
+</section>
+
+<footer>
+    <h3>GS Elite Drop Taxi</h3>
+    <p>Safe, Reliable & Affordable Taxi Service</p>
+    <p>📞 9677040298</p>
+    <p>📍 Chennai & Chengalpattu</p>
+    <p>⏰ Available 24×7</p>
+    <p>© 2026 GS Elite Drop Taxi. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/9677040298" class="whatsapp-btn" target="_blank">💬</a>
+
+<!-- CRITICAL FIX: Link your JavaScript file here -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

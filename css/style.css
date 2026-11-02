@@ -1,0 +1,424 @@
+html{
+    scroll-behavior:smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+}
+
+header{
+    position:relative;
+    overflow:hidden;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(rgba(255,140,0,0.3),
+    rgba(214,40,40,0.3)),
+    url("../Images/road.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    filter:blur(4px);
+    transform:scale(1.05);
+
+    z-index:-1;
+}
+
+header h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+header a{
+    display:inline-block;
+    background:white;
+    color:#D62828;
+    text-decoration:none;
+    padding:12px 25px;
+    margin:5px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+section{
+    padding:50px 20px;
+}
+
+h2{
+    text-align:center;
+    color:#D62828;
+    margin-bottom:30px;
+}
+
+.service-box{
+    background:#fff5cc;
+    padding:20px;
+    border-left:6px solid #FFD700;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.service-box h3{
+    color:#D62828;
+    margin-bottom:10px;
+}
+
+ul{
+    max-width:500px;
+    margin:auto;
+}
+
+ul li{
+    margin:10px 0;
+}
+
+section p{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:32px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+}
+ 
+.logo{
+    width:250px;
+    display:block;
+    margin:0 auto 20px;
+
+    border-radius:25px;
+
+    opacity:1;
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,0.5);
+
+    filter:brightness(1.2) contrast(1.2);
+
+    transform:translateY(10px);
+}
+nav{
+    background:#b71c1c;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav-logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.booking-form{
+    background:#fff;
+    padding:50px;
+    text-align:center;
+}
+
+.booking-form form{
+    max-width:600px;
+    margin:auto;
+}
+
+.booking-form input,
+.booking-form select{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.booking-form button{
+    background:#d62828;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+.vehicles{
+    padding:60px 20px;
+    background:#f8f8f8;
+    text-align:center;
+}
+
+.vehicle-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.vehicle-card{
+    background:white;
+    width:280px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.vehicle-card h3{
+    color:#d62828;
+    margin-bottom:10px;
+}
+.reviews{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.review-card{
+    background:#fff5cc;
+    padding:20px;
+    margin:20px auto;
+    max-width:600px;
+    border-radius:10px;
+}
+.routes{
+    padding:60px 20px;
+    background:#f8f8f8;
+    text-align:center;
+}
+
+.route-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.route-card{
+    background:#d62828;
+    color:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    font-weight:bold;
+}
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.vehicle-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+footer{
+    background:#b71c1c;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+}
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    z-index:1000;
+}
+.quote-btn{
+    display:inline-block;
+    background:#d62828;
+    color:white;
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:18px;
+    margin-top:15px;
+}
+header a,
+.quote-btn{
+    transition:0.3s;
+}
+
+header a:hover,
+.quote-btn:hover{
+    transform:translateY(-3px);
+    opacity:0.9;
+}
+.fare-table{
+    padding:60px 20px;
+    text-align:center;
+    background:#f8f8f8;
+}
+
+.fare-table table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+}
+
+.fare-table th{
+    background:#d62828;
+    color:white;
+    padding:15px;
+}
+
+.fare-table td{
+    border:1px solid #ddd;
+    padding:15px;
+}
+
+.fare-table tr:hover{
+    background:#fff5cc;
+}
+.highlight{
+    padding:60px 20px;
+    text-align:center;
+    background:#fff5cc;
+}
+
+.highlight-box{
+    background:white;
+    margin:15px auto;
+    padding:15px;
+    max-width:500px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    font-weight:bold;
+}
+
+.map-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.map-section iframe{
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+header h1,
+header p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+/* Smooth Scrolling & Header Buttons */
+html {
+    scroll-behavior: smooth;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-book {
+    background-color: #d93025;
+    color: #ffffff;
+    border: 2px solid #d93025;
+}
+
+.btn-book:hover {
+    background-color: #b3261e;
+    border-color: #b3261e;
+    transform: translateY(-3px);
+}
+
+.btn-call {
+    background-color: #ffffff;
+    color: #d93025;
+    border: 2px solid #ffffff;
+}
+
+.btn-call:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-3px);
+}
